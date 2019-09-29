@@ -1,0 +1,6 @@
+server:
+  port: 8080
+  context-path: /spring-boot-demo-chapter1
+spring:
+  application:
+    name: spring-boot-demo-chapter1

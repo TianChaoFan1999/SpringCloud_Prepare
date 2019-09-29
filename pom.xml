@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.tcf.framework.boot.demo</groupId>
+  <artifactId>spring-boot-demo-chapter1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- TODO TCF SpringBoot项目基础依赖 -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.4.4.RELEASE</version>
+  </parent>
+  
+  <!-- TODO TCF SpringBoot Starter组件 -->
+  <dependencies>
+     
+    <!-- TODO TCF Logging日志依赖：基于logback -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-logging</artifactId>
+    </dependency>
+    
+    <!-- TODO TCF SpringMVC核心依赖 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    
+    <!-- TODO TCF Spring AOP核心依赖 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-aop</artifactId>
+    </dependency>
+    
+  </dependencies>
+  
+  <!-- TODO TCF Docker微服务虚拟容器 -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.spotify</groupId>
+        <artifactId>docker-maven-plugin</artifactId>
+        <version>0.4.10</version>
+        <configuration>
+        <baseImage>java</baseImage>
+        <imageName>example</imageName>
+      </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+</project>
